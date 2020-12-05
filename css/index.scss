@@ -1,1 +1,229 @@
 @import 'needs.scss';
+
+.header {
+    width: $w;
+    height: 1024px;
+    background-image: linear-gradient(77.61deg, rgba(13, 18, 27, 0.9) 0%, rgba(0, 0, 0, 0) 128.26%), linear-gradient(77.61deg, rgba(50, 50, 50, 0.7) 0%, rgba(50, 50, 50, 0) 128.26%), url(../img/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+    position: relative;
+
+    &-head {
+        width: $w;
+        height: 114px;
+        background: rgba(13, 18, 27, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 105px 0;
+
+        &__logo {
+            display: block;
+        }
+
+        &__nav {
+            margin: 0 0 0 2.44791667%;
+
+            &-list {
+                width: 692px;
+                margin: 0 0 21px 0;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+
+                &-item {
+                    &-link {
+                        @include txt(#fff, 18px, 15px, normal, $M);
+                        opacity: .5;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            &-text {
+                display: flex;
+                align-items: center;
+
+                &-logo {
+                    margin: 0 10px 0 0;
+                }
+
+                &-txt {
+                    @include txt(#fff, 162.3%, 12px, normal, $M);
+
+                    &-link {
+                        color: #FFD8AB;
+                    }
+                }
+            }
+        }
+
+        .black-line {
+            margin: 0 19px 0 0;
+        }
+
+        .smartphone {
+            width: 39px;
+            height: 38px;
+            margin: 0 15px 0 0;
+            position: relative;
+
+            .phone {
+                position: absolute;
+                left: 6px;
+                top: -7px;
+            }
+        }
+
+        &__numbers-text {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 250px;
+            @include txt(rgba(204, 204, 204, 0.657), 28px, 18px, normal, $M);
+
+            &-link {
+                @include txt(#fff, 28px, 18px, normal, $M);
+                text-decoration: none;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+
+    &-main {
+        margin: 0 0 0 16%;
+
+        &__title {
+            display: block;
+            max-width: 740px;
+            @include txt(#fff, 140.9%, 48px, 600, $F);
+            text-transform: uppercase;
+            margin: 0 0 49px 0;
+
+            &-color {
+                background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        &__text {
+            display: block;
+            width: 561px;
+            margin: 0 0 43px (19px + 77px);
+            @include txt($c2, 180%, 18px, 300, $M);
+            position: relative;
+
+            &-color {
+                font-weight: 800;
+                background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &::before {
+                content: url(../img/flash.png);
+                background: url(../img/forma-back.svg) no-repeat;
+                background-position: -3px 7px;
+                position: absolute;
+                top: -8px;
+                left: -19px - 77px;
+            }
+        }
+
+        &__form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 660px;
+
+            &-tel {
+                width: 300px;
+
+                &-label {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0 0 0px 0;
+
+                    span {
+                        display: block;
+                    }
+
+                    &-text-left,
+                    &-text-right {
+                        @include txt(#fff, 180%, 16px, normal, $M);
+                    }
+
+                    &-text-right {
+                        color: $c3;
+                    }
+                }
+
+                &-input {
+                    width: $w;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid transparent;
+                    border-image: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                    -moz-border-image: -moz-linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                    -webkit-border-image: -webkit-linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                    border-image-slice: 1;
+                    @include txt(#fff, 180%, 16px, normal, $M);
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .form-btn {
+                width: 300px;
+                height: 65px;
+                background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                border-radius: 10px;
+                border: none;
+                @include txt(#000, 20px, 16px, 500, $M);
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    &-checked {
+        position: absolute;
+        bottom: 61px;
+        left: 16%;
+        display: flex;
+
+        &-text {
+            @include txt(#fff, 160%, 16px, 300, $M);
+            display: flex;
+            align-items: baseline;
+            margin: 0 5.5% 0 0;
+
+            &::before {
+                content: url(../img/tick-1.svg);
+                margin: 0 20px 0 0;
+                background: url(../img/forma-back-2.svg) no-repeat;
+                background-position: 0 2px;
+            }
+
+            &:nth-child(2) {
+                width: 290px;
+            }
+
+            &:nth-child(4) {
+                width: 230px;
+            }
+        }
+    }
+}

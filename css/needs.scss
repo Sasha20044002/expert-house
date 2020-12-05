@@ -1,13 +1,15 @@
 //size
 $w: 100%;
 //colors
-
+$c1: #FFD8AB;
+$c2: #FAFBFC;
+$c3: #828282;
 //fonts
 $M: 'Montserrat';
 $F: 'Futura PT';
 
 //import
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 @import url(../fonts/FuturaPT-Demi.ttf);
 
 //mixin
@@ -17,4 +19,9 @@ $F: 'Futura PT';
     font-size: $font-size;
     font-weight: $font-weight;
     font-family: $font-family, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
 }
