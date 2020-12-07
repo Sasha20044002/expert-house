@@ -1,5 +1,9 @@
 @import 'needs.scss';
 
+.margin-left {
+    margin: 0 0 0 $n1;
+}
+
 .header {
     width: $w;
     height: 1024px;
@@ -93,7 +97,6 @@
     }
 
     &-main {
-        margin: 0 0 0 16%;
 
         &__title {
             display: block;
@@ -223,6 +226,119 @@
 
             &:nth-child(4) {
                 width: 230px;
+            }
+        }
+    }
+}
+
+.main {
+    .drawing {
+        min-height: 1168px;
+        background: url(../img/back2.png) no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-title {
+            align-self: flex-start;
+            padding: 120px 0 0 0;
+            margin: 0 0 0 $n1;
+
+            &__title {
+                @include txt(#fff, 140.2%, 40px, 600, $F);
+                text-transform: uppercase;
+                display: block;
+                width: 820px;
+                margin: 0 0 20px 0;
+            }
+
+            &__text {
+                @include txt(#fff, 170%, 20px, 600, $F);
+                display: block;
+                margin-bottom: 70px;
+            }
+        }
+
+        &-list {
+            min-width: 1286px;
+            // border: 1px solid blue;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: $n1 + 3%;
+
+            &__item {
+                width: 560px;
+                display: flex;
+                position: relative;
+                margin-right: 113px;
+
+                &-text {
+                    @include txt(#fff, 200%, 16px, 300, $M);
+
+                    &-title {
+                        @include txt(#fff, 160%, 18px, 600, $M);
+                        display: block;
+                        margin: 0 0 13px 0;
+                    }
+
+                }
+
+                &::before {
+                    width: 107.95px;
+                    height: 103.76px;
+                    content: url(../img/icon-clock.png);
+                    background: url(../img/forma-back-3.svg) no-repeat;
+                    background-position: -2px -1px;
+                    position: absolute;
+                    left: -78.95px;
+                }
+
+                &:nth-child(2) {
+                    margin-bottom: 60px;
+
+                    &::before {
+                        content: url(../img/icon-globus.svg);
+                    }
+                }
+
+                &:nth-child(3) {
+                    margin-bottom: 60px;
+
+                    &::before {
+                        content: url(../img/icon-geo.svg);
+                    }
+                }
+
+                &:nth-child(4) {
+                    &::before {
+                        content: url(../img/icon-home.svg);
+                    }
+                }
+
+                &:nth-child(5) {
+                    &::before {
+                        content: url(../img/icon-color.svg);
+                    }
+                }
+            }
+
+            .form-btn {
+                width: 300px;
+                height: 65px;
+                background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                margin: 50px 0 0 0;
+                border-radius: 10px;
+                @include txt(#000, 20px, 16px, 500, $M);
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:focus {
+                    outline: none;
+                }
             }
         }
     }
