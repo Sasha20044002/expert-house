@@ -235,6 +235,7 @@
     .drawing {
         min-height: 1168px;
         background: url(../img/back2.png) no-repeat;
+        background-size: cover;
         background-position: center;
         display: flex;
         flex-direction: column;
@@ -263,7 +264,6 @@
 
         &-list {
             min-width: 1286px;
-            // border: 1px solid blue;
             display: flex;
             flex-wrap: wrap;
             margin-left: $n1 + 3%;
@@ -338,6 +338,114 @@
 
                 &:focus {
                     outline: none;
+                }
+            }
+        }
+    }
+
+    .project {
+        min-height: 2318px;
+        background: url(../img/back3.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__title {
+            padding: 120px 0 0 0;
+            margin: 0 0 32px 0;
+
+            &-title {
+                width: 962px;
+                @include txt(#1e1e1e, 140.2%, 40px, 600, $F);
+                text-transform: uppercase;
+                margin: 0 0 20px 0;
+                display: block;
+            }
+
+            &-text {
+                @include txt(#1e1e1e, 170%, 20px, 600, $M);
+            }
+        }
+
+        &__1st,
+        &__2nd,
+        &__3rd,
+        &__4th,
+        &__5th {
+            height: 344px;
+            width: 1305px;
+            margin: 0 0 50px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .content {
+                margin: 0 0 0 95px;
+                position: relative;
+
+                span {
+                    display: block;
+                }
+
+                &-title {
+                    @include txt(#1e1e1e, 160%, 18px, 600, $M);
+                }
+
+                &-text {
+                    width: 547px;
+                    @include txt(#1e1e1e, 200%, 16px, 300, $M);
+                    margin: 13px 0;
+                }
+
+                &-author {
+                    background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    @include txt(none, 200%, 16px, 600, $M);
+                }
+            }
+        }
+
+        &__1st {
+            .content {
+                &::before {
+                    content: '1';
+                    @include number;
+                }
+            }
+        }
+        &__2nd {
+            .content {
+                &::before {
+                    content: '2';
+                    @include number;
+                }
+            }
+        }
+        &__3rd{
+            .content {
+                &::before {
+                    content: '3';
+                    @include number;
+                }
+            }
+        }
+        &__4th{
+            .content {
+                &::before {
+                    content: '4';
+                    @include number;
+                }
+            }
+        }
+        &__5th{
+            padding: 0 0 120px 0;
+            .content {
+                &::before {
+                    content: '5';
+                    @include number;
                 }
             }
         }

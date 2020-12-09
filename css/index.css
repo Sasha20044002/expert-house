@@ -317,6 +317,7 @@
 .main .drawing {
   min-height: 1168px;
   background: url(../img/back2.png) no-repeat;
+  background-size: cover;
   background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -458,4 +459,186 @@
 
 .main .drawing-list .form-btn:focus {
   outline: none;
+}
+
+.main .project {
+  min-height: 2318px;
+  background: url(../img/back3.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .project__title {
+  padding: 120px 0 0 0;
+  margin: 0 0 32px 0;
+}
+
+.main .project__title-title {
+  width: 962px;
+  color: #1e1e1e;
+  line-height: 140.2%;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Futura PT", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  display: block;
+}
+
+.main .project__title-text {
+  color: #1e1e1e;
+  line-height: 170%;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main .project__1st, .main .project__2nd, .main .project__3rd, .main .project__4th, .main .project__5th {
+  height: 344px;
+  width: 1305px;
+  margin: 0 0 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .project__1st .content, .main .project__2nd .content, .main .project__3rd .content, .main .project__4th .content, .main .project__5th .content {
+  margin: 0 0 0 95px;
+  position: relative;
+}
+
+.main .project__1st .content span, .main .project__2nd .content span, .main .project__3rd .content span, .main .project__4th .content span, .main .project__5th .content span {
+  display: block;
+}
+
+.main .project__1st .content-title, .main .project__2nd .content-title, .main .project__3rd .content-title, .main .project__4th .content-title, .main .project__5th .content-title {
+  color: #1e1e1e;
+  line-height: 160%;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main .project__1st .content-text, .main .project__2nd .content-text, .main .project__3rd .content-text, .main .project__4th .content-text, .main .project__5th .content-text {
+  width: 547px;
+  color: #1e1e1e;
+  line-height: 200%;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  margin: 13px 0;
+}
+
+.main .project__1st .content-author, .main .project__2nd .content-author, .main .project__3rd .content-author, .main .project__4th .content-author, .main .project__5th .content-author {
+  background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: none;
+  line-height: 200%;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main .project__1st .content::before {
+  content: '1';
+  text-transform: uppercase;
+  background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: none;
+  line-height: 141px;
+  font-size: 110px;
+  font-weight: 600;
+  font-family: "Futura PT", sans-serif;
+  position: absolute;
+  left: -95px;
+  top: -25px;
+}
+
+.main .project__2nd .content::before {
+  content: '2';
+  text-transform: uppercase;
+  background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: none;
+  line-height: 141px;
+  font-size: 110px;
+  font-weight: 600;
+  font-family: "Futura PT", sans-serif;
+  position: absolute;
+  left: -95px;
+  top: -25px;
+}
+
+.main .project__3rd .content::before {
+  content: '3';
+  text-transform: uppercase;
+  background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: none;
+  line-height: 141px;
+  font-size: 110px;
+  font-weight: 600;
+  font-family: "Futura PT", sans-serif;
+  position: absolute;
+  left: -95px;
+  top: -25px;
+}
+
+.main .project__4th .content::before {
+  content: '4';
+  text-transform: uppercase;
+  background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: none;
+  line-height: 141px;
+  font-size: 110px;
+  font-weight: 600;
+  font-family: "Futura PT", sans-serif;
+  position: absolute;
+  left: -95px;
+  top: -25px;
+}
+
+.main .project__5th {
+  padding: 0 0 120px 0;
+}
+
+.main .project__5th .content::before {
+  content: '5';
+  text-transform: uppercase;
+  background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: none;
+  line-height: 141px;
+  font-size: 110px;
+  font-weight: 600;
+  font-family: "Futura PT", sans-serif;
+  position: absolute;
+  left: -95px;
+  top: -25px;
 }

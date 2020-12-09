@@ -23,6 +23,17 @@ $F: 'Futura PT';
     font-family: $font-family, sans-serif;
 }
 
+@mixin number{
+    text-transform: uppercase;
+    background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include txt(none, 141px, 110px, 600, $F);
+    position: absolute;
+    left: -95px;
+    top: -25px;
+}
+
 * {
     padding: 0;
     margin: 0;
