@@ -1,4 +1,4 @@
-@import 'needs.scss';
+@import '_needs.scss';
 
 .margin-left {
     margin: 0 0 0 $n1;
@@ -352,6 +352,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
         &__title {
             padding: 120px 0 0 0;
             margin: 0 0 32px 0;
@@ -416,6 +417,7 @@
                 }
             }
         }
+
         &__2nd {
             .content {
                 &::before {
@@ -424,7 +426,8 @@
                 }
             }
         }
-        &__3rd{
+
+        &__3rd {
             .content {
                 &::before {
                     content: '3';
@@ -432,7 +435,8 @@
                 }
             }
         }
-        &__4th{
+
+        &__4th {
             .content {
                 &::before {
                     content: '4';
@@ -440,12 +444,181 @@
                 }
             }
         }
-        &__5th{
+
+        &__5th {
             padding: 0 0 120px 0;
+
             .content {
                 &::before {
                     content: '5';
                     @include number;
+                }
+            }
+        }
+    }
+
+    .entry {
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: center;
+        padding-top: 98px;
+        padding-bottom: 171px;
+
+        &-content {
+            width: 630px;
+            padding-top: 22px;
+            margin: 0 5.16% 0 0;
+            display: flex;
+            flex-direction: column;
+
+            &-title {
+                width: 100%;
+                @include txt($c4, 140.2%, 40px, 600, $F);
+                text-transform: uppercase;
+                margin: 0 0 20px 0;
+            }
+
+            &-text-1 {
+                width: 100%;
+                @include txt($c4, 170%, 20px, 600, $M);
+                margin: 0 0 37px 0;
+            }
+
+            &-text-2 {
+                @include txt($c4, 200%, 16px, 400, $M);
+                width: 629px;
+                margin: 0 0 43px 0;
+            }
+
+            &__form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+
+                &-tel {
+                    width: 300px;
+
+                    &-label {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 0 0 0px 0;
+
+                        span {
+                            display: block;
+                        }
+
+                        &-text-left,
+                        &-text-right {
+                            @include txt($c4, 180%, 16px, normal, $M);
+                        }
+
+                        &-text-right {
+                            color: $c3;
+                        }
+                    }
+
+                    &-input {
+                        width: $w;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid transparent;
+                        border-image: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                        -moz-border-image: -moz-linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                        -webkit-border-image: -webkit-linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                        border-image-slice: 1;
+                        @include txt($c4, 180%, 16px, normal, $M);
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+
+                .form-btn {
+                    width: 300px;
+                    height: 65px;
+                    background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                    border-radius: 10px;
+                    border: none;
+                    @include txt(#000, 20px, 16px, 500, $M);
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        &-author{
+            display: flex;
+            align-items: flex-end;
+            &-profile{
+                width: 271px;
+                margin: 0 42.8px 0 0;
+                position: relative;
+
+                &-img{
+                    padding-left: 7px;
+                    margin: 0 0 16px 0;
+                    position: relative;
+                }
+
+                .back{
+                    position: absolute;
+                    top: 153px;
+                    right: -23px;
+                    z-index: -1;
+                }
+
+                .forma-back{
+                    position: absolute;
+                    bottom: -105px;
+                    left: -209.2px;
+                    z-index: -2;
+                }
+
+                &-name,
+                &-job{
+                    @include txt($c4, 170%, 30px, 600, $M);
+                }
+
+                &-job{
+                    background: linear-gradient(268.05deg, #FFF9C6 15.37%, #FFD8AB 99.44%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    color: none;
+                    font-size: 18px;
+                }
+            }
+
+            &-list{
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+
+                &-item{
+                    @include txt($c4, 200%, 14px, 300, $M);
+                    margin: 0 0 10px 0;
+                    width: 210px;
+                    display: flex;
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+
+                    &::before{
+                        content: url(../img/tick-2.svg);
+                        background-image: url(../img/forma-tick.svg);
+                        background-repeat: no-repeat;
+                        margin: 0 12px 0 0;
+                    }
                 }
             }
         }
